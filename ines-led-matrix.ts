@@ -17,7 +17,7 @@
 
 // TODO use matrixWidth and matrixHeight and figure out how to implement images and handel matrix-luts with these variables size
 
-//% color=#000000 icon="\uf00a" block="Luma Matrix"
+//% color=#000000 icon="\uf00a" block="neomatrix"
 namespace neomatrix {
     
     /* GLOBAL VARIABLES */
