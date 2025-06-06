@@ -18,7 +18,7 @@
 // TODO use matrixWidth and matrixHeight and figure out how to implement images and handel matrix-luts with these variables size
 
 //% color=#3162a3 icon="\uf00a" block="Luma Matrix"
-namespace lumaMatrix {
+namespace neomatrix {
     
     /* GLOBAL VARIABLES */
     export let strip: neopixel.Strip;
@@ -653,7 +653,7 @@ namespace lumaMatrix {
     //% blockId="ZHAW_Input_JoystickCompare"
     //% block="$joystick == $direction"
     //% joystick.shadow="ZHAW_Input_JoystickRead"
-    //% direction.defl=lumaMatrix.eJoystickDirection.Center
+    //% direction.defl=neomatrix.eJoystickDirection.Center
     //% subcategory="Input"
     export function compareJoystick(joystick: number, direction: eJoystickDirection): boolean {
         return joystick === direction;
@@ -687,7 +687,7 @@ namespace lumaMatrix {
     */
     //% blockId="ZHAW_Input_JoystickCallbackDir"
     //% block="when joystick direction is %direction"
-    //% direction.defl=lumaMatrix.eJoystickDirection.Center
+    //% direction.defl=neomatrix.eJoystickDirection.Center
     //% subcategory="Input"
     // TODO #BUG when using multiple joystickDirectionThread blocks and the callback function do not finish before executing the other joystickDirectionThread block, microbit crashes.
     export function joystickDirectionThread(direction: eJoystickDirection, callback: () => void): void {
@@ -714,7 +714,7 @@ namespace lumaMatrix {
      */
     //% blockId="ZHAW_IO_JoystickDirectionEnum" 
     //% block="direction $dir"
-    //% dir.defl=lumaMatrix.eJoystickDirection.Center
+    //% dir.defl=neomatrix.eJoystickDirection.Center
     //% subcategory="Input"
     export function getJoystickDirectionEnum(dir: eJoystickDirection): number {
         return dir
@@ -777,7 +777,7 @@ namespace lumaMatrix {
     //% image.shadow="ZHAW_Image_8x8"
     //% color.shadow="colorNumberPicker"
     //% speed.defl=10 speed.min=1 speed.max=99
-    //% direction.defl=lumaMatrix.eDirection.Right
+    //% direction.defl=neomatrix.eDirection.Right
     //% group="Pixels" weight=69
     export function movingImage(image: Image, color: number, speed: number, direction: eDirection): void {
         /* Due to a bug the block is always generated with speed of 0. In this case we set it to the slowest speed. */
