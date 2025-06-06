@@ -15,7 +15,7 @@
  * ------------------------------------------------------------------
  */
 
-namespace lumaMatrix {
+namespace neomatrix {
 
     //% blockId="ZHAW_Matrix_Version"
     //% blockHidden=true

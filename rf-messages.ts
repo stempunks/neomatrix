@@ -17,7 +17,7 @@
 
 
 
-namespace lumaMatrix {
+namespace neomatrix {
 
     /**
      * Enum with predefined datatypes in messages sent over radio
@@ -80,7 +80,7 @@ namespace lumaMatrix {
      */
     //% blockId="ZHAW_RF_DataType" 
     //% block="datatype $dataType"
-    //% dataType.defl=lumaMatrix.eDataType.RGBImage
+    //% dataType.defl=neomatrix.eDataType.RGBImage
     //% subcategory="Communication"
     export function getDataType(dataType: eDataType): eDataType {
         return dataType
@@ -91,7 +91,7 @@ namespace lumaMatrix {
      */
     //% blockId="ZHAW_RF_ColorPicker" 
     //% block="color palette $color"
-    //% color.defl=lumaMatrix.eColorPalette.Yellow
+    //% color.defl=neomatrix.eColorPalette.Yellow
     //% subcategory="Communication"
     export function getColorPalette(color: eColorPalette): number {
         let R = predefinedPalette[color][0] << 16 
@@ -289,7 +289,7 @@ namespace lumaMatrix {
         let green = receivedBuffer.getUint8(4);
         let blue = receivedBuffer.getUint8(5);
 
-        lumaMatrix.setOnePixelRGB(x, y, red, green, blue);
+        neomatrix.setOnePixelRGB(x, y, red, green, blue);
     }
 
 
